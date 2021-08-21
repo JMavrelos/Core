@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#00745e</color>
+    <color name="primaryDarkColor">#004734</color>
+    <color name="secondaryColor">#00745e</color>
+    <color name="secondaryDarkColor">#004734</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#ffffff</color>
+
+    <color name="backgroundColor">#f3f3f3</color>
+    <color name="textColor">#000000</color>
+
+    <color name="surfaceColor">#ffffff</color>
+    <color name="surfaceTextColor">#000000</color>
+
+    <color name="errorColor">#b00020</color>
+    <color name="errorTextColor">#ffffff</color>
+
+    <color name="warnColor">#c7af00</color>
+    <color name="warnTextColor">#000000</color>
+</resources>
