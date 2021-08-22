@@ -1,6 +1,7 @@
 package gr.blackswamp.core.test
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.text.Editable
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -24,14 +25,18 @@ class TestActivity : AppCompatActivity() {
         setContentView(binding.root)
         binding.action.setOnClickListener(this::doStuff)
         tw1 = ControlledTextWatcher(binding.text, this::textChanged)
-        tw2 = ControlledTextWatcher(binding.editText, this::textChanged, afterChange = this::afterChange)
+        tw2 = ControlledTextWatcher(binding.editText, this::textChanged)
         spinner.setOnSelectionListener {
             textChanged("$it", 0, 0, 0)
         }
     }
 
-    private fun afterChange(editable: Editable?) {
-        editable?.append("|")
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onRestoreInstanceState(savedInstanceState, persistentState)
     }
 
     private fun textChanged(text: CharSequence?, start: Int, before: Int, count: Int) {
